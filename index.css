@@ -1,3 +1,37 @@
 * {
     font-family: Arial;
 }
+
+.content-container {
+    width: 100vw;
+    height: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.egg-choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10vh 0;
+}
+
+.egg {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+
+    width: 5vw;
+    height: 5vw;
+
+    margin: 0 5vw;
+}
