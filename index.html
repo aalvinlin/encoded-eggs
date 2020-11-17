@@ -7,6 +7,20 @@
 
     <script>
         const text = "A quick brown fox jumps over the lazy dog."
+
+        const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        const rot13_mapping = {};
+
+        // create rot13 mapping
+        for (let i = 0; i < alphabet.length; i += 1)
+            { rot13_mapping[alphabet[i]] = alphabet[(i + 13) % 26]; }
+
+        let encodings = {
+            "rot13": null,
+            "semaphore": null,
+            "Braille": null,
+        }
     </script>
 
 </head>
