@@ -22,6 +22,14 @@
 
         const setEncodingChoice = choice => {
             encodingChoice = choice;
+            document.getElementById("egg-chooser").classList.add("hidden")
+            document.getElementById("encoded-text").classList.remove("hidden")
+        }
+
+        const goBackToMenu = () => {
+            encodingChoice = null;
+            document.getElementById("encoded-text").classList.add("hidden")
+            document.getElementById("egg-chooser").classList.remove("hidden")
         }
 
     </script>
@@ -33,7 +41,7 @@
 
         <div class="content">
 
-            <div class="egg-chooser">
+            <div id="egg-chooser">
                 <h1>Encoded Eggs</h1>
 
                     <div class="egg-choices">
@@ -62,6 +70,14 @@
                     </div>
 
                 <h2>Choose an Encoding</h2>
+            </div>
+
+            <div id="encoded-text" class="hidden">
+
+                <div id="back-to-menu" onClick="goBackToMenu()">
+                    Back
+                </div>
+
             </div>
 
         </div>

@@ -35,3 +35,7 @@ h1, h2, h3 {
 
     margin: 0 5vw;
 }
+
+.hidden {
+    display: none;
+}
