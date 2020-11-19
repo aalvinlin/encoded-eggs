@@ -20,10 +20,27 @@
 
         let encodingChoice = null;
 
+        let currentPageNumber = null;
+        let currentLineNumber = null;
+        let currentEncodedLine = null;
+
         const setEncodingChoice = choice => {
             encodingChoice = choice;
             document.getElementById("egg-chooser").classList.add("hidden")
             document.getElementById("encoded-text").classList.remove("hidden")
+
+            // set first line of text
+            if (encodings[choice])
+                {
+                    currentPageNumber = 0;
+                    currentLineNumber = 0;
+                    currentEncodedLine = encodings[choice](text[currentPageNumber][currentLineNumber]);
+
+                    let textElement = document.createElement("p");
+                    textElement.textContent = currentEncodedLine;
+
+                    document.getElementById("encoded-text").appendChild(textElement);
+                }
         }
 
         const goBackToMenu = () => {
