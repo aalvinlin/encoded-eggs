@@ -121,3 +121,7 @@ h1, h2, h3 {
 .hidden {
     display: none;
 }
+
+#encoded-text {
+    font-size: 4rem;
+}

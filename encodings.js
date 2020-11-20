@@ -7,7 +7,9 @@ for (let i = 0; i < alphabet.length; i += 1)
     { rot13_mapping[alphabet[i]] = alphabet[(i + 13) % 26]; }
 
 const rot13_transform = input => {
-
+    
+    let textElement = document.createElement("p");
+    
     let result = "";
 
     for (let i = 0; i < input.length; i += 1)
@@ -27,7 +29,9 @@ const rot13_transform = input => {
                 { result += character; }
         }
 
-    return result;
+    textElement.textContent = result;
+
+    return textElement;
 }
 
 const number_mapping = {};
@@ -37,6 +41,8 @@ for (let i = 0; i < alphabet.length; i += 1)
     { number_mapping[alphabet[i]] = i + 1; }
 
 const number_transform = input => {
+
+    let textElement = document.createElement("p");
 
     let result = "";
 
@@ -61,5 +67,7 @@ const number_transform = input => {
                 { result += character; }
         }
 
-    return result;
+    textElement.textContent = result;
+
+    return textElement;
 }

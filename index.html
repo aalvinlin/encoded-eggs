@@ -43,10 +43,7 @@
                     currentLineNumber = 0;
                     currentEncodedLine = encodings[choice](text[currentPageNumber][currentLineNumber]);
 
-                    let textElement = document.createElement("p");
-                    textElement.textContent = currentEncodedLine;
-
-                    document.getElementById("current-line").appendChild(textElement);
+                    document.getElementById("current-line").appendChild(currentEncodedLine);
                 }
         }
 
