@@ -29,3 +29,37 @@ const rot13_transform = input => {
 
     return result;
 }
+
+const number_mapping = {};
+
+// create number mapping
+for (let i = 0; i < alphabet.length; i += 1)
+    { number_mapping[alphabet[i]] = i + 1; }
+
+const number_transform = input => {
+
+    let result = "";
+
+    for (let i = 0; i < input.length; i += 1)
+        {
+            let character = input[i];
+
+            // lowercase letter
+            if (number_mapping[character])
+                { result += number_mapping[character] + " "; }
+
+            // uppercase letter
+            else if (number_mapping[character.toLowerCase()])
+                { result += number_mapping[character.toLowerCase()] + " "; }
+
+            // space
+            else if (character === " ")
+                { result += " | "; }
+
+            // punctuation
+            else
+                { result += character; }
+        }
+
+    return result;
+}
