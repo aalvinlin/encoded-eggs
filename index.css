@@ -125,3 +125,32 @@ h1, h2, h3 {
 #encoded-text {
     font-size: 4rem;
 }
+
+.number-encoding {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 5rem;
+    line-height: 5rem;
+
+    /* margin: 0 0.25rem; */
+
+    background-color: #F9F9F9;
+    border: 2px solid #CCCCCC;
+
+}
