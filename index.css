@@ -43,6 +43,13 @@ header {
 #subheading-back p {
     width: 30%;
     padding-left: 1rem;
+
+    line-height: 2rem;
+}
+
+#subheading-back p:hover {
+    color: #333333;
+    cursor: pointer;
 }
 
 #subheading-back h2 {
