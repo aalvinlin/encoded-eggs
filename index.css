@@ -7,6 +7,13 @@ header {
     height: 10vh;
 
     margin: 0 auto;
+
+    background-color: #CCFFCC;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-container {
@@ -22,7 +29,7 @@ header {
 
 h1, h2, h3 {
     margin: 0 auto;
-    text-align: center;
+    text-align: center;    
 }
 
 .egg-choices {
