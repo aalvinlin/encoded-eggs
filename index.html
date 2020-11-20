@@ -13,10 +13,10 @@
     <script>
 
         const encodings = {
-            "rot13": rot13_transform,
-            "semaphore": null,
+            "ROT 13": rot13_transform,
+            "Semaphore": null,
             "Braille": null,
-            "number": number_transform
+            "Number": number_transform
         }
 
         let encodingChoice = null;
@@ -27,12 +27,18 @@
 
         const setEncodingChoice = choice => {
             encodingChoice = choice;
-            document.getElementById("egg-chooser").classList.add("hidden")
-            document.getElementById("encoded-text").classList.remove("hidden")
 
-            // set first line of text
+            document.getElementById("egg-chooser").classList.toggle("hidden")
+            document.getElementById("subheading-instruction").classList.toggle("hidden")
+            document.getElementById("subheading-back").classList.toggle("hidden")
+            document.getElementById("encoded-text").classList.toggle("hidden")
+
             if (encodings[choice])
                 {
+                    // update subheading
+                    document.getElementById("subheading-chosen").textContent = choice;
+
+                    // set first line of text
                     currentPageNumber = 0;
                     currentLineNumber = 0;
                     currentEncodedLine = encodings[choice](text[currentPageNumber][currentLineNumber]);
@@ -46,8 +52,11 @@
 
         const goBackToMenu = () => {
             encodingChoice = null;
-            document.getElementById("encoded-text").classList.add("hidden");
-            document.getElementById("egg-chooser").classList.remove("hidden");
+
+            document.getElementById("subheading-instruction").classList.toggle("hidden")
+            document.getElementById("subheading-back").classList.toggle("hidden")
+            document.getElementById("encoded-text").classList.toggle("hidden");
+            document.getElementById("egg-chooser").classList.toggle("hidden");
 
             let currentLine = document.getElementById("current-line");
 
@@ -64,12 +73,12 @@
         <h1>Encoded Eggs</h1>
     </header>
 
-    <section class="subheading subheading-instruction">
+    <section class="subheading" id="subheading-instruction">
         <h2>Choose an Encoding</h2>
     </section>
 
-    <section class="subheading subheading-back">
-        <p>&#9664; Back to Menu</p>
+    <section class="subheading hidden" id="subheading-back">
+        <p onClick="goBackToMenu()">&#9664; Back to Menu</p>
         <h2 id="subheading-chosen"></h2>
         <p></p>
     </section>
@@ -82,18 +91,18 @@
                 
                     <div class="egg-choices">
 
-                        <div class="egg-choice" onClick="setEncodingChoice('rot13')">
+                        <div class="egg-choice" onClick="setEncodingChoice('ROT 13')">
                             <div class="egg">
                                 egg
                             </div>
                             <h3>ROT 13</h3>
                         </div>
 
-                        <div class="egg-choice" onClick="setEncodingChoice('semaphore')">
+                        <div class="egg-choice" onClick="setEncodingChoice('Semaphore')">
                             <div class="egg">
                                 egg
                             </div>
-                            <h3>semaphore</h3>
+                            <h3>Semaphore</h3>
                         </div>
 
                         <div class="egg-choice" onClick="setEncodingChoice('Braille')">
@@ -103,7 +112,7 @@
                             <h3>Braille</h3>
                         </div>
 
-                        <div class="egg-choice" onClick="setEncodingChoice('number')">
+                        <div class="egg-choice" onClick="setEncodingChoice('Number')">
                             <div class="egg">
                                 egg
                             </div>
@@ -114,10 +123,6 @@
             </div>
 
             <div id="encoded-text" class="hidden">
-
-                <div id="back-to-menu" onClick="goBackToMenu()">
-                    Back
-                </div>
 
                 <div id="current-line">
 
