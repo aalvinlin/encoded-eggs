@@ -72,12 +72,38 @@ h1, h2, h3 {
     text-align: center;    
 }
 
-.egg-choices {
+#egg-chooser {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
+    width: 95vw;
     margin: 10vh 0;
+}
+
+#egg-chooser.hidden {
+    display: none;
+}
+
+.egg-choice {
+    width: 20vw;
+    height: 20vw;
+
+    border-radius: 5px;
+    background-color: #F9F9F9;
+    border: 2px solid #CCCCCC;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.egg-choice:hover {
+    background-color: #FCFCFC;
+    border: 2px solid #999999;
 }
 
 .egg {
@@ -86,10 +112,10 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;   
 
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
 
-    margin: 0 5vw;
+    margin: 0 auto;
 }
 
 .hidden {
