@@ -16,6 +16,21 @@ header {
     align-items: center;
 }
 
+.subheading {
+    width: 95vw;
+    height: 5vh;
+
+    margin: 1vh auto;
+
+    background-color: #FFCC66;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .content-container {
     width: 95vh;
     height: 85vh;
