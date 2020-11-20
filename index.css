@@ -30,6 +30,20 @@ header {
     align-items: center;
 }
 
+.subheading-back {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subheading-back p {
+    width: 30%;
+    padding-left: 1rem;
+}
+
+.subheading-back h2 {
+    width: 40%;
+}
 
 .content-container {
     width: 95vh;
