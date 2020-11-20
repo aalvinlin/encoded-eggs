@@ -2,9 +2,18 @@
     font-family: Arial;
 }
 
+header {
+    width: 95vw;
+    height: 10vh;
+
+    margin: 0 auto;
+}
+
 .content-container {
-    width: 100vw;
-    height: 95vh;
+    width: 95vh;
+    height: 85vh;
+
+    margin: 0 auto;
 
     display: flex;
     justify-content: center;
