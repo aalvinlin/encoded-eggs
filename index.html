@@ -39,14 +39,14 @@
                     let textElement = document.createElement("p");
                     textElement.textContent = currentEncodedLine;
 
-                    document.getElementById("encoded-text").appendChild(textElement);
+                    document.getElementById("current-line").appendChild(textElement);
                 }
         }
 
         const goBackToMenu = () => {
             encodingChoice = null;
-            document.getElementById("encoded-text").classList.add("hidden")
-            document.getElementById("egg-chooser").classList.remove("hidden")
+            document.getElementById("encoded-text").classList.add("hidden");
+            document.getElementById("egg-chooser").classList.remove("hidden");
         }
 
     </script>
@@ -93,6 +93,10 @@
 
                 <div id="back-to-menu" onClick="goBackToMenu()">
                     Back
+                </div>
+
+                <div id="current-line">
+
                 </div>
 
             </div>
