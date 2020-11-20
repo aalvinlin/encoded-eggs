@@ -47,6 +47,11 @@
             encodingChoice = null;
             document.getElementById("encoded-text").classList.add("hidden");
             document.getElementById("egg-chooser").classList.remove("hidden");
+
+            let currentLine = document.getElementById("current-line");
+
+            while (currentLine.hasChildNodes())
+                { currentLine.removeChild(currentLine.childNodes[0]); }
         }
 
     </script>
