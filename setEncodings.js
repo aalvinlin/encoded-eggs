@@ -24,8 +24,12 @@ const setEncodingChoice = choice => {
             // update subheading
             document.getElementById("subheading-chosen").textContent = choice;
 
+            // update state variables
+            currentPageNumber = 0;
+            currentLineNumber = 0;
+
             // set first line of text
-            setCurrentLine(0, 0, encodings[choice]);
+            setCurrentLine(currentPageNumber, currentLineNumber, encodings[choice]);
         }
 }
 
