@@ -25,11 +25,7 @@ const setEncodingChoice = choice => {
             document.getElementById("subheading-chosen").textContent = choice;
 
             // set first line of text
-            currentPageNumber = 0;
-            currentLineNumber = 0;
-            currentEncodedLine = encodings[choice](text[currentPageNumber][currentLineNumber]);
-
-            document.getElementById("current-line").appendChild(currentEncodedLine);
+            setCurrentLine(0, 0, encodings[choice]);
         }
 }
 
@@ -41,8 +37,5 @@ const goBackToMenu = () => {
     document.getElementById("encoded-text").classList.toggle("hidden");
     document.getElementById("egg-chooser").classList.toggle("hidden");
 
-    let currentLine = document.getElementById("current-line");
-
-    while (currentLine.hasChildNodes())
-        { currentLine.removeChild(currentLine.childNodes[0]); }
+    clearCurrentLine();
 }
