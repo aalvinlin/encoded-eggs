@@ -129,7 +129,8 @@ h1, h2, h3 {
 
 .number-encoding {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -158,6 +159,7 @@ h1, h2, h3 {
 
 .braille-encoding {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
