@@ -68,6 +68,7 @@ const braille_dot_locations = {
     "?": new Set([2, 3, 6]),
     "!": new Set([2, 3, 5]),
     ",": new Set([2]),
+    "-": new Set([3, 6]),
 }
 
 const braille_transform = input => {
