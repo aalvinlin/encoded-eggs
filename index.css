@@ -1,5 +1,6 @@
 * {
     font-family: Arial;
+    box-sizing: border-box;
 }
 
 header {
@@ -153,4 +154,51 @@ h1, h2, h3 {
     background-color: #F9F9F9;
     border: 2px solid #CCCCCC;
 
+}
+
+.braille-encoding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.braille-word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1rem;
+}
+
+
+.braille-cell {
+    width: 3rem;
+    height: 3.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 0.25rem;
+
+    border: 0px solid black;
+}
+
+.braille-dot {
+ 
+    width: 1rem;
+    height: 1rem;
+ 
+    margin: 0.25rem;
+
+    border-radius: 50%;
+}
+
+.braille-dot-filled {
+    background-color: green;
+}
+
+.braille-dot-blank {
+    background-color: #EEEEEE;
 }

@@ -70,6 +70,71 @@ const braille_dot_locations = {
     ",": new Set([2]),
 }
 
+const braille_transform = input => {
+
+        let textElement = document.createElement("div");
+        textElement.classList.add("braille-encoding");
+    
+        let words = input.split(" ");
+    
+        for (let wordID = 0; wordID < words.length; wordID += 1)
+            {
+                let wordBox = document.createElement("div");
+                wordBox.classList.add("braille-word-container");
+    
+                let currentWord = words[wordID];
+    
+                for (let i = 0; i < currentWord.length; i += 1)
+                    {
+                        let brailleCell = document.createElement("div");
+                        brailleCell.classList.add("braille-cell");
+    
+                        let character = currentWord[i];
+    
+                        // for now, convert all uppercase letters to lowercase
+                        if (braille_dot_locations[character.toLowerCase()])
+                            {
+                                character = character.toLowerCase();
+                            }
+    
+                        // lowercase letter
+                        if (braille_dot_locations[character])
+                            {
+                                let dots = [];
+    
+                                for (let i = 0; i < 6; i += 1)
+                                    {
+                                        dots[i] = document.createElement("div");
+                                        dots[i].classList.add("braille-dot");
+    
+                                        if (braille_dot_locations[character].has(i + 1))
+                                            { dots[i].classList.add("braille-dot-filled"); }
+                                        else
+                                            { dots[i].classList.add("braille-dot-blank"); }
+                                    }
+    
+                                brailleCell.appendChild(dots[1 - 1]);
+                                brailleCell.appendChild(dots[4 - 1]);
+                                brailleCell.appendChild(dots[2 - 1]);
+                                brailleCell.appendChild(dots[5 - 1]);
+                                brailleCell.appendChild(dots[3 - 1]);
+                                brailleCell.appendChild(dots[6 - 1]);
+                            }
+    
+                        // misc. character
+                        else
+                            { brailleCell.textContent = character; }
+    
+                        wordBox.appendChild(brailleCell);
+                    }
+                
+                textElement.appendChild(wordBox);
+            }
+    
+        return textElement;
+    }
+       
+
 const number_mapping = {};
 
 // create number mapping
