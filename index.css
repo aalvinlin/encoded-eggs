@@ -59,7 +59,7 @@ header {
 
 .content-container {
     width: 95vh;
-    height: 80vh;
+    height: 78vh;
 
     margin: 0 auto;
 
@@ -122,6 +122,30 @@ h1, h2, h3 {
 .hidden {
     display: none;
 }
+
+#progress-bar-container {
+
+    width: 95vw;
+    height: 2vh;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#progress-bar {
+
+    width: 0%;
+    height: 50%;
+
+    background-color: #669966;
+
+    border-radius: 3px;
+}
+
 
 #encoded-text {
     font-size: 4rem;
