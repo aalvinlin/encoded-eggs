@@ -8,7 +8,11 @@ for (let encoding in encodings)
 
         let egg = document.createElement("div");
         egg.classList.add("egg");
-        egg.textContent = "egg";
+
+        if (encodings[encoding])
+            { egg.appendChild(encodings[encoding]("egg")); }
+        else
+            { egg.textContent = "egg"; }
 
         let encodingText = document.createElement("h3");
         encodingText.textContent = encoding;
