@@ -44,9 +44,12 @@ const changeLine = event => {
                 {
                     clearCurrentLine();
                     setCurrentLine(currentPageNumber, currentLineNumber, encodings[encodingChoice]);
+
+                    // update progress bar if page number changed
+                    document.getElementById("progress-bar").style.width = ((currentPageNumber + 1) / text.length * 100) + "%";
+
                 }
         }
 }
 
 document.getElementById("body").addEventListener("keydown", changeLine);
-

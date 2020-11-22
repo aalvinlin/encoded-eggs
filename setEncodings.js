@@ -42,4 +42,6 @@ const goBackToMenu = () => {
     document.getElementById("egg-chooser").classList.toggle("hidden");
 
     clearCurrentLine();
+
+    document.getElementById("progress-bar").style.width = 0;
 }
