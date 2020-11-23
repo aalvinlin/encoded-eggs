@@ -166,7 +166,8 @@ h1, h2, h3 {
     margin: 1rem;
 }
 
-.number-character-container {
+/* option with all numbers and punctuation in boxes */
+.number-character-container-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,6 +179,24 @@ h1, h2, h3 {
 
     background-color: #F9F9F9;
     border: 2px solid #CCCCCC;
+
+}
+
+/* option with numbers underneath blank spaces */
+.number-character-container-underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 4rem;
+    font-size: 2rem;
+    /* line-height: 5rem; */
+
+    margin: 0 0.25rem;
+    margin-top: 4rem;
+
+    border: none;
+    border-top: 2px solid #999999;
 
 }
 

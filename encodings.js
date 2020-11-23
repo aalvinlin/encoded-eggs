@@ -159,7 +159,7 @@ const number_transform = input => {
             for (let i = 0; i < currentWord.length; i += 1)
                 {
                     let characterBox = document.createElement("div");
-                    characterBox.classList.add("number-character-container");
+                    characterBox.classList.add("number-character-container-underline");
 
                     let character = currentWord[i];
 
