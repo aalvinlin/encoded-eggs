@@ -158,7 +158,7 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.word-container {
+.number-word-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +166,7 @@ h1, h2, h3 {
     margin: 1rem;
 }
 
-.character-container {
+.number-character-container {
     display: flex;
     justify-content: center;
     align-items: center;

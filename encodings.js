@@ -152,14 +152,14 @@ const number_transform = input => {
     for (let wordID = 0; wordID < words.length; wordID += 1)
         {
             let wordBox = document.createElement("div");
-            wordBox.classList.add("word-container");
+            wordBox.classList.add("number-word-container");
 
             let currentWord = words[wordID];
 
             for (let i = 0; i < currentWord.length; i += 1)
                 {
                     let characterBox = document.createElement("div");
-                    characterBox.classList.add("character-container");
+                    characterBox.classList.add("number-character-container");
 
                     let character = currentWord[i];
 
