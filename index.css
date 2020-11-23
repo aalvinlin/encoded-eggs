@@ -200,6 +200,20 @@ h1, h2, h3 {
 
 }
 
+/* option with numbers underneath blank spaces: move punctuation symbols up and hide underline */
+.number-character-container-underline-punctuation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 4rem;
+    font-size: 2rem;
+    
+    margin: 0 0.25rem;
+
+    border: none;
+}
+
 .braille-encoding {
     display: flex;
     flex-wrap: wrap;

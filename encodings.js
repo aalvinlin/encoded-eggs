@@ -159,21 +159,29 @@ const number_transform = input => {
             for (let i = 0; i < currentWord.length; i += 1)
                 {
                     let characterBox = document.createElement("div");
-                    characterBox.classList.add("number-character-container-underline");
-
+                    
                     let character = currentWord[i];
 
                     // lowercase letter
                     if (number_mapping[character])
-                        { characterBox.textContent = number_mapping[character]; }
+                        {
+                            characterBox.textContent = number_mapping[character];
+                            characterBox.classList.add("number-character-container-underline");
+                        }
 
                     // uppercase letter
                     else if (number_mapping[character.toLowerCase()])
-                        { characterBox.textContent = number_mapping[character.toLowerCase()]; }
+                        {
+                            characterBox.textContent = number_mapping[character.toLowerCase()];
+                            characterBox.classList.add("number-character-container-underline");
+                        }
 
                     // punctuation
                     else
-                        { characterBox.textContent = character; }
+                        {
+                            characterBox.textContent = character;
+                            characterBox.classList.add("number-character-container-underline-punctuation");
+                        }
 
                     wordBox.appendChild(characterBox);
                 }
