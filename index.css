@@ -164,6 +164,12 @@ h1, h2, h3 {
     align-items: center;
 }
 
+/** use a smaller font size and width on main menu */
+.small-text .number-character-container-underline {
+    font-size: 2rem;
+    width: 3rem;
+}
+
 .number-word-container {
     display: flex;
     justify-content: center;
