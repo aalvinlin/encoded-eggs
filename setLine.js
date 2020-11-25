@@ -8,8 +8,6 @@ const clearCurrentLine = () => {
 
 const setCurrentLine = (currentPageNumber, currentLineNumber, encodingsCallback) => {
 
-    console.log(text);
-
     if (text.length === 0)
         {
             let errorMessage = document.createElement("p");
