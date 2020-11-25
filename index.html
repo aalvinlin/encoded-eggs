@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="./index.css" />
 
-    <script src="./story.js"></script>
+    <script src="./processText.js"></script>
+
     <script src="./encodings.js"></script>
     
     <script src="./setLine.js"></script>
@@ -29,7 +30,7 @@
     </div>
 
     <div id="textarea-input-div">
-        <textarea id="textarea-input"></textarea>
+        <textarea id="textarea-input" onchange="updateText()"></textarea>
     </div>
 
     <div class="subheading" id="subheading-instruction">
@@ -37,7 +38,7 @@
     </div>
 
     <div class="subheading hidden" id="subheading-back">
-        <p onClick="goBackToMenu()">&#9664; Back to Menu</p>
+        <p onclick="goBackToMenu()">&#9664; Back to Menu</p>
         <h2 id="subheading-chosen"></h2>
         <p></p>
     </div>
