@@ -14,6 +14,9 @@ let currentEncodedLine = null;
 const setEncodingChoice = choice => {
     encodingChoice = choice;
 
+    document.getElementById("text-input-instructions").classList.toggle("hidden")
+    document.getElementById("textarea-input-div").classList.toggle("hidden")
+    
     document.getElementById("egg-chooser").classList.toggle("hidden")
     document.getElementById("subheading-instruction").classList.toggle("hidden")
     document.getElementById("subheading-back").classList.toggle("hidden")
@@ -36,6 +39,9 @@ const setEncodingChoice = choice => {
 const goBackToMenu = () => {
     encodingChoice = null;
 
+    document.getElementById("text-input-instructions").classList.toggle("hidden")
+    document.getElementById("textarea-input-div").classList.toggle("hidden")
+    
     document.getElementById("subheading-instruction").classList.toggle("hidden")
     document.getElementById("subheading-back").classList.toggle("hidden")
     document.getElementById("encoded-text").classList.toggle("hidden");

@@ -79,12 +79,20 @@ h1, h2, h3 {
     text-align: center;    
 }
 
+#text-input-instructions.hidden {
+    display: none;
+}
+
 #textarea-input-div {
     width: 95vw;
     
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#textarea-input-div.hidden {
+    display: none;
 }
 
 #textarea-input {
