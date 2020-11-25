@@ -8,7 +8,20 @@ const clearCurrentLine = () => {
 
 const setCurrentLine = (currentPageNumber, currentLineNumber, encodingsCallback) => {
 
-    currentEncodedLine = encodingsCallback(text[currentPageNumber][currentLineNumber]);
+    console.log(text);
+
+    if (text.length === 0)
+        {
+            let errorMessage = document.createElement("p");
+            errorMessage.classList.add("error");
+            errorMessage.textContent = "No text specified."
+
+            currentEncodedLine = errorMessage;
+        }    
+    else
+        {
+            currentEncodedLine = encodingsCallback(text[currentPageNumber][currentLineNumber]);
+        }
     
     document.getElementById("current-line").appendChild(currentEncodedLine);
 }

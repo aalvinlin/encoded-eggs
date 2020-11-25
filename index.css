@@ -305,3 +305,8 @@ h1, h2, h3 {
 .braille-dot-blank {
     background-color: #EEEEEE;
 }
+
+.error {
+    font-size: 2rem;
+    color: #CC6600;
+}
