@@ -79,7 +79,7 @@ h1, h2, h3 {
     text-align: center;    
 }
 
-.textarea-input-div {
+#textarea-input-div {
     width: 95vw;
     
     display: flex;
@@ -95,6 +95,7 @@ h1, h2, h3 {
     padding: 0.5rem;
 
     border: 2px solid #CCCCCC;
+    border-radius: 5px;
 }
 
 #egg-chooser {
