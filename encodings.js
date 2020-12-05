@@ -191,3 +191,12 @@ const number_transform = input => {
 
     return textElement;
 }
+
+const semaphore_flag_locations = {
+
+}
+
+const semaphore_transform = input => {
+
+    return null;
+}
