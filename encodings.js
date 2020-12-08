@@ -192,8 +192,38 @@ const number_transform = input => {
     return textElement;
 }
 
+// numbers represent integer multiples of pi/4
 const semaphore_flag_locations = {
+    "a": [5, 6],
+    "b": [4, 6],
+    "c": [3, 6],
+    "d": [2, 6],
+    "e": [1, 6],
+    "f": [0, 6],
+    "g": [7, 6],
+    
+    "h": [4, 5],
+    "i": [3, 5],
+    "j": [0, 2],
+    "k": [2, 5],
+    "l": [1, 5],
+    "m": [0, 5],
+    "n": [7, 5],
+    
+    "o": [3, 4],
+    "p": [2, 4],
+    "q": [1, 4],
+    "r": [0, 4],
+    "s": [7, 4],
+    
+    "t": [2, 3],
+    "u": [1, 3],
+    "v": [7, 2],
 
+    "w": [0, 1],
+    "x": [7, 1],
+    "y": [0, 3],
+    "z": [7, 0]
 }
 
 const semaphore_transform = input => {
