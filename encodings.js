@@ -228,5 +228,8 @@ const semaphore_flag_locations = {
 
 const semaphore_transform = input => {
 
+    let textElement = document.createElement("div");
+    textElement.classList.add("semaphore-encoding");
+
     return null;
 }
