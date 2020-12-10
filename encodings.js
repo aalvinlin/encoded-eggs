@@ -231,5 +231,23 @@ const semaphore_transform = input => {
     let textElement = document.createElement("div");
     textElement.classList.add("semaphore-encoding");
 
+    let words = input.split(" ");
+    
+    for (let wordID = 0; wordID < words.length; wordID += 1)
+        {
+            let wordBox = document.createElement("div");
+            wordBox.classList.add("semaphore-word-container");
+
+            let currentWord = words[wordID];
+
+            for (let i = 0; i < currentWord.length; i += 1)
+                {
+                    let semaphoreFlag = document.createElement("div");
+                    semaphoreFlag.classList.add("semaphore-flag");
+
+                    let character = currentWord[i];
+                }
+        }
+
     return null;
 }
