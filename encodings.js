@@ -252,9 +252,17 @@ const semaphore_transform = input => {
     return null;
 }
 
+const morse_code_sequences = {
+
+}
+
 const morse_transform = input => {
     
     return null;
+}
+
+const pigpen_borders = {
+    
 }
 
 const pigpen_transform = input => {
