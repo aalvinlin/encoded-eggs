@@ -254,6 +254,7 @@ const semaphore_transform = input => {
                             flagImage.setAttribute("viewBox", "0 0 100 100");
                             flagImage.setAttribute("xmlns", "http://www.w3.org/2000/svg");
                             flagImage.setAttribute("stroke", "#333333");
+                            flagImage.setAttribute("stroke-width", "8");
                             flagImage.classList.add("semaphore-flag");
 
                             // stationary flag remains the same within each group of letters of the alphabet
@@ -267,8 +268,8 @@ const semaphore_transform = input => {
                             flagMoving = document.createElement("line");
                             flagMoving.setAttribute("x1", "0");
                             flagMoving.setAttribute("y1", "0");
-                            flagMoving.setAttribute("x2", "-40");
-                            flagMoving.setAttribute("y2", "-20");
+                            flagMoving.setAttribute("x2", "40");
+                            flagMoving.setAttribute("y2", "20");
                             flagStationary.setAttribute("stroke", "#006699");
 
                             flagImage.appendChild(flagStationary);
