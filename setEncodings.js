@@ -1,6 +1,6 @@
 const encodings = {
     "ROT 13": rot13_transform,
-    "Semaphore": null,
+    "Semaphore": semaphore_transform,
     "Braille": braille_transform,
     "Number": number_transform
 }
