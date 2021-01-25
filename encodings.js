@@ -249,33 +249,33 @@ const semaphore_transform = input => {
 
                     if (semaphore_flag_locations[character])
                         {
-                            let flagImage = document.createElement("svg");
+                            let flagImage = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
                             flagImage.setAttribute("viewBox", "0 0 100 100");
                             flagImage.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-                            flagImage.setAttribute("stroke", "#333333");
-                            flagImage.setAttribute("stroke-width", "8");
                             flagImage.classList.add("semaphore-flag");
 
                             // stationary flag remains the same within each group of letters of the alphabet
-                            flagStationary = document.createElement("line");
-                            flagStationary.setAttribute("x1", "0");
-                            flagStationary.setAttribute("y1", "0");
-                            flagStationary.setAttribute("x2", "30");
-                            flagStationary.setAttribute("y2", "40");
-                            flagStationary.setAttribute("stroke", "#CC9966");
+                            flagStationary = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            flagStationary.setAttributeNS(null, "x1", "0");
+                            flagStationary.setAttributeNS(null, "y1", "0");
+                            flagStationary.setAttributeNS(null, "x2", "30");
+                            flagStationary.setAttributeNS(null, "y2", "40");
+                            flagStationary.classList.add("flag-stationary");
 
-                            flagMoving = document.createElement("line");
-                            flagMoving.setAttribute("x1", "0");
-                            flagMoving.setAttribute("y1", "0");
-                            flagMoving.setAttribute("x2", "40");
-                            flagMoving.setAttribute("y2", "20");
-                            flagStationary.setAttribute("stroke", "#006699");
+                            flagMoving = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            flagMoving.setAttributeNS(null, "x1", "0");
+                            flagMoving.setAttributeNS(null, "y1", "0");
+                            flagMoving.setAttributeNS(null, "x2", "40");
+                            flagMoving.setAttributeNS(null, "y2", "20");
+                            flagMoving.classList.add("flag-moving");
 
                             flagImage.appendChild(flagStationary);
                             flagImage.appendChild(flagMoving);
                             semaphoreFlag.appendChild(flagImage);
                         }
+
+                    console.log(semaphoreFlag.innerHTML)
 
                     wordBox.appendChild(semaphoreFlag);
                 }
