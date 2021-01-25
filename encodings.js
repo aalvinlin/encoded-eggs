@@ -281,6 +281,7 @@ const semaphore_transform = input => {
                             flagImage.appendChild(flagStationary);
                             flagImage.appendChild(flagMoving);
                             flagImage.appendChild(flagCircle);
+
                             semaphoreFlag.appendChild(flagImage);
                         }
 

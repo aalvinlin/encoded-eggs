@@ -202,6 +202,11 @@ h1, h2, h3 {
     width: 3rem;
 }
 
+.small-text .semaphore-letter-container {
+    width: 80px;
+    height: 80px;
+}
+
 .number-word-container {
     display: flex;
     justify-content: center;
@@ -311,15 +316,30 @@ h1, h2, h3 {
     color: #CC6600;
 }
 
+
+.semaphore-encoding {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .semaphore-word-container {
     display: flex;
     justify-content: space-between;
+    margin: 0 2rem;
+}
+
+/* set sizes of semaphore flags */
+.semaphore-letter-container {
+    height: 100px;
+    width: 100px;
 }
 
 .semaphore-flag {
     stroke-width: 8;
     stroke: #333333;
-    stroke-linecap:round;
+    stroke-linecap: round;
 }
 
 .flag-circle {
