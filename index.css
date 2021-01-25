@@ -321,3 +321,9 @@ h1, h2, h3 {
     stroke: #333333;
     stroke-linecap:round;
 }
+
+.flag-circle {
+    stroke-width: 2;
+    stroke: #CCCCCC;
+    fill: transparent;
+}

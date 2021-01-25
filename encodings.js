@@ -249,6 +249,8 @@ const semaphore_transform = input => {
 
                     if (semaphore_flag_locations[character])
                         {
+                            const [angleStationary, angleMoving] = semaphore_flag_locations[character];
+
                             let flagImage = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
                             flagImage.setAttribute("viewBox", "0 0 100 100");
@@ -257,25 +259,30 @@ const semaphore_transform = input => {
 
                             // stationary flag remains the same within each group of letters of the alphabet
                             flagStationary = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                            flagStationary.setAttributeNS(null, "x1", "0");
-                            flagStationary.setAttributeNS(null, "y1", "0");
-                            flagStationary.setAttributeNS(null, "x2", "30");
-                            flagStationary.setAttributeNS(null, "y2", "40");
+                            flagStationary.setAttributeNS(null, "x1", "50");
+                            flagStationary.setAttributeNS(null, "y1", "50");
+                            flagStationary.setAttributeNS(null, "x2", 50 + 40 * Math.cos(angleStationary * Math.PI / 4));
+                            flagStationary.setAttributeNS(null, "y2", 50 - 40 * Math.sin(angleStationary * Math.PI / 4));
                             flagStationary.classList.add("flag-stationary");
 
                             flagMoving = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                            flagMoving.setAttributeNS(null, "x1", "0");
-                            flagMoving.setAttributeNS(null, "y1", "0");
-                            flagMoving.setAttributeNS(null, "x2", "40");
-                            flagMoving.setAttributeNS(null, "y2", "20");
+                            flagMoving.setAttributeNS(null, "x1", "50");
+                            flagMoving.setAttributeNS(null, "y1", "50");
+                            flagMoving.setAttributeNS(null, "x2", 50 + 40 * Math.cos(angleMoving * Math.PI / 4));
+                            flagMoving.setAttributeNS(null, "y2", 50 - 40 * Math.sin(angleMoving * Math.PI / 4));
                             flagMoving.classList.add("flag-moving");
+
+                            flagCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                            flagCircle.setAttributeNS(null, "cx", "50");
+                            flagCircle.setAttributeNS(null, "cy", "50");
+                            flagCircle.setAttributeNS(null, "r", "50");
+                            flagCircle.classList.add("flag-circle");
 
                             flagImage.appendChild(flagStationary);
                             flagImage.appendChild(flagMoving);
+                            flagImage.appendChild(flagCircle);
                             semaphoreFlag.appendChild(flagImage);
                         }
-
-                    console.log(semaphoreFlag.innerHTML)
 
                     wordBox.appendChild(semaphoreFlag);
                 }
