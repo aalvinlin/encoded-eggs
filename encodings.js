@@ -261,21 +261,21 @@ const semaphore_transform = input => {
                             flagStationary = document.createElementNS('http://www.w3.org/2000/svg', 'line');
                             flagStationary.setAttributeNS(null, "x1", "50");
                             flagStationary.setAttributeNS(null, "y1", "50");
-                            flagStationary.setAttributeNS(null, "x2", 50 + 40 * Math.cos(angleStationary * Math.PI / 4));
-                            flagStationary.setAttributeNS(null, "y2", 50 - 40 * Math.sin(angleStationary * Math.PI / 4));
+                            flagStationary.setAttributeNS(null, "x2", 50 + 35 * Math.cos(angleStationary * Math.PI / 4));
+                            flagStationary.setAttributeNS(null, "y2", 50 - 35 * Math.sin(angleStationary * Math.PI / 4));
                             flagStationary.classList.add("flag-stationary");
 
                             flagMoving = document.createElementNS('http://www.w3.org/2000/svg', 'line');
                             flagMoving.setAttributeNS(null, "x1", "50");
                             flagMoving.setAttributeNS(null, "y1", "50");
-                            flagMoving.setAttributeNS(null, "x2", 50 + 40 * Math.cos(angleMoving * Math.PI / 4));
-                            flagMoving.setAttributeNS(null, "y2", 50 - 40 * Math.sin(angleMoving * Math.PI / 4));
+                            flagMoving.setAttributeNS(null, "x2", 50 + 35 * Math.cos(angleMoving * Math.PI / 4));
+                            flagMoving.setAttributeNS(null, "y2", 50 - 35 * Math.sin(angleMoving * Math.PI / 4));
                             flagMoving.classList.add("flag-moving");
 
                             flagCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
                             flagCircle.setAttributeNS(null, "cx", "50");
                             flagCircle.setAttributeNS(null, "cy", "50");
-                            flagCircle.setAttributeNS(null, "r", "50");
+                            flagCircle.setAttributeNS(null, "r", "45");
                             flagCircle.classList.add("flag-circle");
 
                             flagImage.appendChild(flagStationary);
