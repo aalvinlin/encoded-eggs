@@ -2,7 +2,10 @@ const encodings = {
     "ROT 13": rot13_transform,
     "Semaphore": semaphore_transform,
     "Braille": braille_transform,
-    "Number": number_transform
+    "Number": number_transform,
+    "Pigpen": null,
+    "Morse (visual)": null,
+    "Morse (aural)": null
 }
 
 let encodingChoice = null;
