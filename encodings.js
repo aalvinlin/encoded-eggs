@@ -57,7 +57,7 @@ const braille_dot_locations = {
     "s": new Set([2, 3, 4]),
     "t": new Set([2, 3, 4, 5]),
     
-    "u": new Set([1, 4, 6]),
+    "u": new Set([1, 3, 6]),
     "v": new Set([1, 2, 3, 6]),
     "w": new Set([2, 4, 5, 6]),
     "x": new Set([1, 3, 4, 6]),
