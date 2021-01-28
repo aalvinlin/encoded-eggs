@@ -324,9 +324,50 @@ const morse_code_sequences = {
     "z": [1, 1, 0, 0]
 }
 
-const morse_transform = input => {
+const morse_visual = input => {
     
-    return null;
+    let textElement = document.createElement("div");
+    textElement.classList.add("morse-visual-encoding");
+
+    let words = input.split(" ");
+    
+    for (let wordID = 0; wordID < words.length; wordID += 1)
+        {
+            let wordBox = document.createElement("div");
+            wordBox.classList.add("morse-visual-word-container");
+
+            let currentWord = words[wordID];
+
+            for (let i = 0; i < currentWord.length; i += 1)
+                {
+                    let morseLetter = document.createElement("div");
+                    morseLetter.classList.add("morse-visual-letter-container");
+
+                    let character = currentWord[i].toLowerCase();
+
+                    if (morse_code_sequences[character])
+                        {
+                            let morseSequence = "";
+
+                            for (let codeType of morse_code_sequences[character])
+                                {
+                                    // dash if 1; dot if 0
+                                    if (codeType)
+                                        { morseSequence += "-"; } // —
+                                    else
+                                        { morseSequence += "."; } // ⬤
+                                }
+
+                            morseLetter.textContent = morseSequence;
+                        }
+                    
+                    wordBox.appendChild(morseLetter);
+                }
+            
+            textElement.appendChild(wordBox);
+        }
+    
+    return textElement;
 }
 
 const pigpen_borders = {
