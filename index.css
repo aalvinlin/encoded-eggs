@@ -347,3 +347,21 @@ h1, h2, h3 {
     stroke: #CCCCCC;
     fill: transparent;
 }
+
+
+.morse-visual-encoding {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.morse-visual-word-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.morse-visual-letter-container {
+    padding: 0 1rem;
+}
