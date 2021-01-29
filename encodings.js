@@ -371,7 +371,35 @@ const morse_visual = input => {
 }
 
 const pigpen_borders = {
+    "a": [0, "top-left"],
+    "b": [0, "top"],
+    "c": [0, "top-right"],
+    "d": [0, "left"],
+    "e": [0, "center"],
+    "f": [0, "right"],
+    "g": [0, "bottom-left"],
+    "h": [0, "bottom"],
+    "i": [0, "bottom-right"],
     
+    "j": [1, "top-left"],
+    "k": [1, "top"],
+    "l": [1, "top-right"],
+    "m": [1, "left"],
+    "n": [1, "center"],
+    "o": [1, "right"],
+    "p": [1, "bottom-left"],
+    "q": [1, "bottom"],
+    "r": [1, "bottom-right"],
+
+    "s": [0, "top-x"],
+    "t": [0, "left-x"],
+    "u": [0, "right-x"],
+    "v": [0, "bottom-x"],
+
+    "w": [1, "top-x"],
+    "x": [1, "left-x"],
+    "y": [1, "right-x"],
+    "z": [1, "bottom-x"],
 }
 
 const pigpen_transform = input => {
