@@ -423,7 +423,7 @@ h1, h2, h3 {
 
 .pigpen-right {
     border-top: 5px solid #333333;
-    border-right: 5px solid #333333;
+    border-left: 5px solid #333333;
     border-bottom: 5px solid #333333;
 }
 
