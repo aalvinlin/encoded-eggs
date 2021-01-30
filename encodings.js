@@ -430,7 +430,7 @@ const pigpen_transform = input => {
                             if (letterHasDot)
                                 { pigpenSymbol.textContent = "⬤"; }
                             
-                            pigpenSymbol.classList.add(borderClass);
+                            pigpenSymbol.classList.add("pigpen-" + borderClass);
                         }
                     
                     wordBox.appendChild(pigpenSymbol);

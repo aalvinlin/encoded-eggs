@@ -365,3 +365,116 @@ h1, h2, h3 {
 .morse-visual-letter-container {
     padding: 0 1rem;
 }
+
+
+
+.pigpen-encoding {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pigpen-word-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+.pigpen-letter-container {
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+
+    margin: 2rem 0.25rem;
+
+    font-size: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pigpen-top-left {
+    border-right: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+}
+
+.pigpen-top {
+    border-left: 5px solid #333333;
+    border-right: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+}
+
+.pigpen-top-right {
+    border-left: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+}
+
+.pigpen-left {
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+}
+
+.pigpen-center {
+    border: 5px solid #333333;
+}
+
+.pigpen-right {
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+}
+
+.pigpen-bottom-left {
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+}
+
+.pigpen-bottom {
+    border-top: 5px solid #333333;
+    border-left: 5px solid #333333;
+    border-right: 5px solid #333333;
+}
+
+.pigpen-bottom-right {
+    border-top: 5px solid #333333;
+    border-left: 5px solid #333333;
+}
+
+.pigpen-top-x {
+    border-left: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+
+    margin: 0 1rem;
+
+    transform: rotate(-45deg);
+}
+
+.pigpen-left-x {
+    border-right: 5px solid #333333;
+    border-bottom: 5px solid #333333;
+    
+    margin: 0 1rem;
+
+    transform: rotate(-45deg);
+}
+
+.pigpen-right-x {
+    border-top: 5px solid #333333;
+    border-left: 5px solid #333333;
+    
+    margin: 0 1rem;
+
+    transform: rotate(-45deg);
+}
+
+.pigpen-bottom-x {
+    border-top: 5px solid #333333;
+    border-right: 5px solid #333333;
+    
+    margin: 0 1rem;
+
+    transform: rotate(-45deg);
+}
