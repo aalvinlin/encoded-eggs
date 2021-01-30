@@ -404,5 +404,40 @@ const pigpen_borders = {
 
 const pigpen_transform = input => {
     
-    return null;
+    let textElement = document.createElement("div");
+    textElement.classList.add("pigpen-encoding");
+
+    let words = input.split(" ");
+    
+    for (let wordID = 0; wordID < words.length; wordID += 1)
+        {
+            let wordBox = document.createElement("div");
+            wordBox.classList.add("pigpen-word-container");
+
+            let currentWord = words[wordID];
+
+            for (let i = 0; i < currentWord.length; i += 1)
+                {
+                    let pigpenSymbol = document.createElement("div");
+                    pigpenSymbol.classList.add("pigpen-letter-container");
+
+                    let character = currentWord[i].toLowerCase();
+
+                    if (pigpen_borders[character])
+                        {
+                            const [letterHasDot, borderClass] = pigpen_borders[character];
+
+                            if (letterHasDot)
+                                { pigpenSymbol.textContent = "⬤"; }
+                            
+                            pigpenSymbol.classList.add(borderClass);
+                        }
+                    
+                    wordBox.appendChild(pigpenSymbol);
+                }
+            
+            textElement.appendChild(wordBox);
+        }
+    
+    return textElement;
 }

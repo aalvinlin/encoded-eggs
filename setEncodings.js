@@ -3,7 +3,7 @@ const encodings = {
     "Semaphore": semaphore_transform,
     "Braille": braille_transform,
     "Number": number_transform,
-    "Pigpen": null,
+    "Pigpen": pigpen_transform,
     "Morse (visual)": morse_visual,
     "Morse (aural)": null
 }
