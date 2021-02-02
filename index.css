@@ -443,38 +443,31 @@ h1, h2, h3 {
     border-left: 5px solid #333333;
 }
 
-.pigpen-top-x {
-    border-left: 5px solid #333333;
-    border-bottom: 5px solid #333333;
+.pigpen-top-x, .pigpen-left-x, .pigpen-right-x, .pigpen-bottom-x {
+    width: 35px;
+    height: 35px;
 
     margin: 0 1rem;
 
     transform: rotate(-45deg);
+}
+
+.pigpen-top-x {
+    border-left: 5px solid #333333;
+    border-bottom: 5px solid #333333;
 }
 
 .pigpen-left-x {
     border-right: 5px solid #333333;
     border-bottom: 5px solid #333333;
-    
-    margin: 0 1rem;
-
-    transform: rotate(-45deg);
 }
 
 .pigpen-right-x {
     border-top: 5px solid #333333;
     border-left: 5px solid #333333;
-    
-    margin: 0 1rem;
-
-    transform: rotate(-45deg);
 }
 
 .pigpen-bottom-x {
     border-top: 5px solid #333333;
     border-right: 5px solid #333333;
-    
-    margin: 0 1rem;
-
-    transform: rotate(-45deg);
 }
