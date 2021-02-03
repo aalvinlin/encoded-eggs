@@ -441,3 +441,45 @@ const pigpen_transform = input => {
     
     return textElement;
 }
+
+const encodeCharacter = (character, encoding) => {
+
+    let encodedCharacter = null;
+
+    switch (encoding)
+        {
+            case "ROT 13":
+
+                break;
+
+            case "Semaphore":
+
+                break;
+            
+            case "Braille":
+
+                break;
+            
+            case "Number":
+
+                break;
+            
+            case "Pigpen":
+
+                break;
+            
+            case "Morse (visual)":
+
+                break;
+            
+            case "Morse (aural)":
+
+                break;
+
+            default:
+                return null;
+        }
+
+    return encodedCharacter;
+}
+
