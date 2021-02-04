@@ -1,3 +1,29 @@
+// create a general function to hold encoded text, including divs for words.
+// encodings will be created for individual letters
+const createEncodedText = (encoding, input) => {
+    
+    let textElement = document.createElement("div");
+    // textElement.classList.add(encoding + "-encoding");
+
+    let words = input.split(" ");
+
+    for (let wordID = 0; wordID < words.length; wordID += 1)
+        {
+            let wordBox = document.createElement("div");
+            wordBox.classList.add("wordBox");
+            
+            let currentWord = words[wordID];
+
+            for (let i = 0; i < currentWord.length; i += 1)
+                {
+                    // let encodedLetter = null;
+                    // wordBox.appendChild(encodedLetter);
+                }
+
+    return textElement;
+
+}
+
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 const rot13_mapping = {};
