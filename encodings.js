@@ -32,6 +32,21 @@ const rot13_mapping = {};
 for (let i = 0; i < alphabet.length; i += 1)
     { rot13_mapping[alphabet[i]] = alphabet[(i + 13) % 26]; }
 
+const encodeLetterRot13 = input => {
+
+    // lowercase letter
+    if (rot13_mapping[character])
+        { return rot13_mapping[character]; }
+
+    // uppercase letter
+    else if (rot13_mapping[character.toLowerCase()])
+        { return rot13_mapping[character.toLowerCase()].toUpperCase(); }
+
+    // space or punctuation
+    else
+        { return character; }
+}
+
 const rot13_transform = input => {
     
     let textElement = document.createElement("p");
