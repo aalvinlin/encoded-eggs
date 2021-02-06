@@ -112,6 +112,46 @@ const braille_dot_locations = {
     "-": new Set([3, 6]),
 }
 
+const encodeLetterBraille = input => {
+
+    let brailleCell = document.createElement("div");
+    brailleCell.classList.add("braille-cell");
+
+    // for now, convert all uppercase letters to lowercase
+    if (braille_dot_locations[input.toLowerCase()])
+        { input = input.toLowerCase(); }
+
+    // lowercase letter
+    if (braille_dot_locations[input])
+        {
+            let dots = [];
+
+            for (let i = 0; i < 6; i += 1)
+                {
+                    dots[i] = document.createElement("div");
+                    dots[i].classList.add("braille-dot");
+
+                    if (braille_dot_locations[input].has(i + 1))
+                        { dots[i].classList.add("braille-dot-filled"); }
+                    else
+                        { dots[i].classList.add("braille-dot-blank"); }
+                }
+
+            brailleCell.appendChild(dots[1 - 1]);
+            brailleCell.appendChild(dots[4 - 1]);
+            brailleCell.appendChild(dots[2 - 1]);
+            brailleCell.appendChild(dots[5 - 1]);
+            brailleCell.appendChild(dots[3 - 1]);
+            brailleCell.appendChild(dots[6 - 1]);
+        }
+
+    // misc. letter
+    else
+        { brailleCell.textContent = input; }
+
+    return brailleCell;
+}
+
 const braille_transform = input => {
 
         let textElement = document.createElement("div");
