@@ -224,6 +224,11 @@ const number_mapping = {};
 for (let i = 0; i < alphabet.length; i += 1)
     { number_mapping[alphabet[i]] = i + 1; }
 
+const encodeLetterNumber = input => {
+
+    return;
+}
+
 const number_transform = input => {
 
     let textElement = document.createElement("div");
