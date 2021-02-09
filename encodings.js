@@ -19,6 +19,7 @@ const createEncodedText = (encoding, input) => {
                     // let encodedLetter = null;
                     // wordBox.appendChild(encodedLetter);
                 }
+        }
 
     return textElement;
 
