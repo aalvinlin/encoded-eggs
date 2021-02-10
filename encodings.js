@@ -226,7 +226,32 @@ for (let i = 0; i < alphabet.length; i += 1)
 
 const encodeLetterNumber = input => {
 
-    return;
+    let characterBox = document.createElement("div");
+                    
+    let character = input;
+
+    // lowercase letter
+    if (number_mapping[character])
+        {
+            characterBox.textContent = number_mapping[character];
+            characterBox.classList.add("number-character-container-underline");
+        }
+
+    // uppercase letter
+    else if (number_mapping[character.toLowerCase()])
+        {
+            characterBox.textContent = number_mapping[character.toLowerCase()];
+            characterBox.classList.add("number-character-container-underline");
+        }
+
+    // punctuation
+    else
+        {
+            characterBox.textContent = character;
+            characterBox.classList.add("number-character-container-underline-punctuation");
+        }
+
+    return characterBox;
 }
 
 const number_transform = input => {
