@@ -514,6 +514,26 @@ const pigpen_borders = {
     "z": [1, "bottom-x"],
 }
 
+const encodeLetterPigpen = input => {
+
+    let pigpenSymbol = document.createElement("div");
+    pigpenSymbol.classList.add("pigpen-letter-container");
+
+    let character = input.toLowerCase();
+
+    if (pigpen_borders[character])
+        {
+            const [letterHasDot, borderClass] = pigpen_borders[character];
+
+            if (letterHasDot)
+                { pigpenSymbol.textContent = "⬤"; }
+            
+            pigpenSymbol.classList.add("pigpen-" + borderClass);
+        }
+    
+    return pigpenSymbol;
+}
+
 const pigpen_transform = input => {
     
     let textElement = document.createElement("div");
