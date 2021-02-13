@@ -436,6 +436,33 @@ const morse_code_sequences = {
     "z": [1, 1, 0, 0]
 }
 
+const encodeLetterMorseVisual = input => {
+
+    let morseLetter = document.createElement("div");
+    morseLetter.classList.add("morse-visual-letter-container");
+
+    let character = input.toLowerCase();
+
+    if (morse_code_sequences[character])
+        {
+            let morseSequence = "";
+
+            for (let codeType of morse_code_sequences[character])
+                {
+                    // dash if 1; dot if 0
+                    if (codeType)
+                        { morseSequence += "-"; } // —
+                    else
+                        { morseSequence += "."; } // ⬤
+                }
+
+            morseLetter.textContent = morseSequence;
+        }
+
+    return morseLetter;
+}
+
+
 const morse_visual = input => {
     
     let textElement = document.createElement("div");
