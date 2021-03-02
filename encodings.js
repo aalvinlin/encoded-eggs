@@ -1,3 +1,15 @@
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
+const letters = new Set(alphabet.split(""));
+
+const braillePunctuation = {
+    ":": "colon",
+    ",": "comma",
+    "!": "exclamation",
+    ".": "period",
+    "?": "question",
+    ";": "semicolon"
+}
+
 // create a general function to hold encoded text, including divs for words.
 // encodings will be created for individual letters
 const createEncodedText = (encoding, input) => {
@@ -44,8 +56,6 @@ const createEncodedText = (encoding, input) => {
     return textElement;
 
 }
-
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 const rot13_mapping = {};
 
