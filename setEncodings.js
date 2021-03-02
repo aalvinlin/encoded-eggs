@@ -1,11 +1,9 @@
-const encodings = {
-    "ROT 13": rot13_transform,
-    "Semaphore": semaphore_transform,
-    "Braille": braille_transform,
-    "Number": number_transform,
-    "Pigpen": pigpen_transform,
-    "Morse (visual)": morse_visual,
-    "Morse (aural)": null
+const encodingTextDisplay = {
+    "rot13": "ROT 13",
+    "semaphore": "Semaphore",
+    "braille": "Braille",
+    "number": "Number",
+    "pigpen": "Pigpen"
 }
 
 let encodingChoice = null;

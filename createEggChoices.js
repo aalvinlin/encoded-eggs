@@ -1,6 +1,6 @@
 const eggChooser = document.getElementById("egg-chooser");
 
-for (let encoding in encodings)
+for (let encoding in encodingTextDisplay)
     {
         let eggChoice = document.createElement("div");
         eggChoice.classList.add("egg-choice");
@@ -10,13 +10,13 @@ for (let encoding in encodings)
         egg.classList.add("egg");
         egg.classList.add("small-text");
         
-        if (encodings[encoding])
-            { egg.appendChild(encodings[encoding]("egg")); }
+        if (encodingTextDisplay[encoding])
+            { egg.appendChild(createEncodedText(encoding, "egg")); }
         else
             { egg.textContent = "egg"; }
 
         let encodingText = document.createElement("h3");
-        encodingText.textContent = encoding;
+        encodingText.textContent = encodingTextDisplay[encoding];
 
         eggChoice.appendChild(egg);
         eggChoice.appendChild(encodingText);
