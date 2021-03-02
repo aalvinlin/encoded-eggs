@@ -8,7 +8,6 @@ for (let encoding in encodingTextDisplay)
 
         let egg = document.createElement("div");
         egg.classList.add("egg");
-        egg.classList.add("small-text");
         
         if (encodingTextDisplay[encoding])
             { egg.appendChild(createEncodedText(encoding, "egg")); }
