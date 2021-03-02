@@ -242,3 +242,8 @@ h1, h2, h3 {
 
     border: none;
 }
+
+.wordBox img {
+    width: 48px;
+    margin: 0 8px;
+}
