@@ -6,7 +6,7 @@ const clearCurrentLine = () => {
         { currentLine.removeChild(currentLine.childNodes[0]); }
 }
 
-const setCurrentLine = (currentPageNumber, currentLineNumber, encodingsCallback) => {
+const setCurrentLine = (currentPageNumber, currentLineNumber, encoding) => {
 
     if (text.length === 0)
         {
@@ -18,7 +18,7 @@ const setCurrentLine = (currentPageNumber, currentLineNumber, encodingsCallback)
         }    
     else
         {
-            currentEncodedLine = encodingsCallback(text[currentPageNumber][currentLineNumber]);
+            currentEncodedLine = createEncodedText(encoding, text[currentPageNumber][currentLineNumber]);
         }
     
     document.getElementById("current-line").appendChild(currentEncodedLine);

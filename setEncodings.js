@@ -23,7 +23,7 @@ const setEncodingChoice = choice => {
     document.getElementById("subheading-back").classList.toggle("hidden")
     document.getElementById("encoded-text").classList.toggle("hidden")
 
-    if (encodings[choice])
+    if (encodingTextDisplay[choice])
         {
             // update subheading
             document.getElementById("subheading-chosen").textContent = choice;
@@ -33,7 +33,7 @@ const setEncodingChoice = choice => {
             currentLineNumber = 0;
 
             // set first line of text
-            setCurrentLine(currentPageNumber, currentLineNumber, encodings[choice]);
+            setCurrentLine(currentPageNumber, currentLineNumber, choice);
         }
 }
 
