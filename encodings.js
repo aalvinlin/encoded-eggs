@@ -1,5 +1,5 @@
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
-const letters = new Set(alphabet.split(""));
+const validLetters = new Set(alphabet.split(""));
 
 const braillePunctuation = {
     ":": "colon",
@@ -44,7 +44,22 @@ const createEncodedText = (encoding, input) => {
                     else
                         {
                             encodedLetter = document.createElement("img");
-                            encodedLetter.setAttribute("src", `images/${encoding}_${currentLetter}.svg`)
+
+                            currentLetter = currentLetter.toLowerCase();
+
+                            if (validLetters.has(currentLetter))
+                                {
+                                    encodedLetter.setAttribute("src", `images/${encoding}_${currentLetter}.svg`)
+                                }
+                            else if (encoding === "braille" && braillePunctuation[currentLetter])
+                                {
+                                    encodedLetter.setAttribute("src", `images/${encoding}_${braillePunctuation[currentLetter]}.svg`)
+                                }
+                            else
+                                {
+                                    unknownLetter = document.createElement("span");
+                                    unknownLetter.textContent = currentLetter;
+                                }
                         }
 
                     wordBox.appendChild(encodedLetter);
