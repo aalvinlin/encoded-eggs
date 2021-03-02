@@ -27,7 +27,7 @@ for (let encoding in encodingTextDisplay)
 /**
 // Example:
 
-    <div class="egg-choice" onClick="setEncodingChoice('ROT 13')">
+    <div class="egg-choice" onClick="setEncodingChoice('rot13')">
         <div class="egg">
             egg
         </div>
