@@ -26,7 +26,7 @@ const setEncodingChoice = choice => {
     if (encodingTextDisplay[choice])
         {
             // update subheading
-            document.getElementById("subheading-chosen").textContent = choice;
+            document.getElementById("subheading-chosen").textContent = encodingTextDisplay[choice];
 
             // update state variables
             currentPageNumber = 0;
