@@ -99,7 +99,18 @@ const number_mapping = {};
 for (let i = 0; i < alphabet.length; i += 1)
     { number_mapping[alphabet[i]] = i + 1; }
 
-const encodeLetterNumber = input => {
+const encodeLetterNumber = character => {
+
+    // lowercase letter
+    if (number_mapping[character.toLowerCase()])
+        { return number_mapping[character.toLowerCase()]; }
+
+    // space or punctuation
+    else
+        { return character; }
+}
+
+const encodeFormattedLetterNumber = input => {
 
     let characterBox = document.createElement("div");
                     
@@ -127,54 +138,4 @@ const encodeLetterNumber = input => {
         }
 
     return characterBox;
-}
-
-const number_transform = input => {
-
-    let textElement = document.createElement("div");
-    textElement.classList.add("number-encoding");
-
-    let words = input.split(" ");
-
-    for (let wordID = 0; wordID < words.length; wordID += 1)
-        {
-            let wordBox = document.createElement("div");
-            wordBox.classList.add("number-word-container");
-
-            let currentWord = words[wordID];
-
-            for (let i = 0; i < currentWord.length; i += 1)
-                {
-                    let characterBox = document.createElement("div");
-                    
-                    let character = currentWord[i];
-
-                    // lowercase letter
-                    if (number_mapping[character])
-                        {
-                            characterBox.textContent = number_mapping[character];
-                            characterBox.classList.add("number-character-container-underline");
-                        }
-
-                    // uppercase letter
-                    else if (number_mapping[character.toLowerCase()])
-                        {
-                            characterBox.textContent = number_mapping[character.toLowerCase()];
-                            characterBox.classList.add("number-character-container-underline");
-                        }
-
-                    // punctuation
-                    else
-                        {
-                            characterBox.textContent = character;
-                            characterBox.classList.add("number-character-container-underline-punctuation");
-                        }
-
-                    wordBox.appendChild(characterBox);
-                }
-            
-            textElement.appendChild(wordBox);
-        }
-
-    return textElement;
 }
