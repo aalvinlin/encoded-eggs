@@ -3,7 +3,7 @@
 const createEncodedText = (encoding, input) => {
     
     let textElement = document.createElement("div");
-    // textElement.classList.add(encoding + "-encoding");
+    textElement.classList.add(encoding + "-encoding");
 
     let words = input.split(" ");
 
@@ -16,9 +16,29 @@ const createEncodedText = (encoding, input) => {
 
             for (let i = 0; i < currentWord.length; i += 1)
                 {
-                    // let encodedLetter = null;
-                    // wordBox.appendChild(encodedLetter);
+                    let currentLetter = currentWord[i];
+                    let encodedLetter;
+
+                    if (encoding === "rot13")
+                        {
+                            encodedLetter = document.createElement("span");
+                            encodedLetter.textContent = encodeLetterRot13(currentLetter);
+                        }
+                    else if (encoding === "number")
+                        {
+                            encodedLetter = document.createElement("span");
+                            encodedLetter.textContent = encodeLetterNumber(currentLetter);
+                        }
+                    else
+                        {
+                            encodedLetter = document.createElement("img");
+                            encodedLetter.setAttribute("src", `images/${encoding}_${currentLetter}.svg`)
+                        }
+
+                    wordBox.appendChild(encodedLetter);
                 }
+
+            textElement.appendChild(wordBox);
         }
 
     return textElement;
@@ -33,7 +53,7 @@ const rot13_mapping = {};
 for (let i = 0; i < alphabet.length; i += 1)
     { rot13_mapping[alphabet[i]] = alphabet[(i + 13) % 26]; }
 
-const encodeLetterRot13 = input => {
+const encodeLetterRot13 = character => {
 
     // lowercase letter
     if (rot13_mapping[character])
