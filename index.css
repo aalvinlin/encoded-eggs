@@ -247,3 +247,7 @@ h1, h2, h3 {
     width: 48px;
     margin: 0 8px;
 }
+
+.number-encoding span {
+    margin: 0 0.5rem;
+}
