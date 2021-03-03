@@ -15,6 +15,7 @@ const braillePunctuation = {
 const createEncodedText = (encoding, input) => {
     
     let textElement = document.createElement("div");
+    textElement.classList.add("encoding");
     textElement.classList.add(encoding + "-encoding");
 
     let words = input.split(" ");

@@ -188,11 +188,18 @@ h1, h2, h3 {
     font-size: 4rem;
 }
 
-.number-encoding {
+.encoding {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+}
+
+.wordBox {
+    margin-right: 48px;
+}
+
+.wordBox:last-child {
+    margin-right: 0;
 }
 
 /* option with all numbers and punctuation in boxes */
